@@ -1,0 +1,121 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #67759a;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        nav {
+            margin: 1em;
+        }
+
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+                nav ul li {
+                    display: inline;
+                    margin-right: 1em;
+                }
+
+        main {
+            margin: 2em;
+        }
+
+        article {
+            background-color: white;
+            padding: 1em;
+            margin-bottom: 1em;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .recipe-photo {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Сайт Випічки</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="htmlpage.html">Робота з Авторами</a></li>
+            <li><a href="htmlpage1.html">Ще випічка</a></li>
+        </ul>
+    </nav>
+
+   <main>
+        <article>
+            <img src="https://shuba.life/static/content/thumbs/991x/4/16/e5nmra-bc1fc6f1ef85aaf6497b8c95568e7164.jpg" alt="Пиріг Тропезьєн" class="recipe-photo">
+            <h2>Пиріг Тропезьєн</h2>
+            <p>Лимонний тарт з меренгою</p>
+            <h3>Інгредієнти:</h3>
+            <ul>
+                <li>Цукор - 500 г</li>
+                <li>Кокосова струшка - 200 г</li>
+                <li>Олія соняшникова рафінована - 80 мл</li>
+                <li>Вода - 45 мл</li>
+                <li>Крохмаль картопляний - 5 г</li>
+                <li>Яйця курячі - 5 шт</li>
+                <li>Лимон - 3 шт</li>
+            </ul>
+                    </article>
+
+        <article>
+            <img src="https://shuba.life/static/content/thumbs/991x/7/80/kbfou4-3fdbe9c66d842fac8a389104d687b807.jpg" alt="Макарон" class="photos">
+            <h2>Макарон</h2>
+            <p>Один із найвідоміших десертів Франції</p>
+            <h3>Інгредієнти:</h3>
+            <ul>
+                <li>Борошно мигдальне - 120 г</li>
+                <li>Цукрова пудра - 75 г</li>
+                <li>Яєчний білок - 2 шт</li>
+                <li>Сіль - 2 г</li>
+                <li>Цукор - 56 г</li>
+            </ul>
+            <h3>Інгредієнти для начинки:</h3>
+            <ul>
+                <li>Масло вершкове 73% - 113 г</li>
+                <li>Цукрова пудра - 38 г</li>
+            </ul>
+        </article>
+    </main>
+    <footer>
+        <p>&copy; 2024 Bakery</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Informatics-2021-Lab2 Library</title>
+    <link rel="stylesheet" href="css/site.css" />
+    <style>
+        /* CSS/site.css */
+
+        /* Body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        /* Heading */
+        h1 {
+            color: #333;
+        }
+
+        /* Form */
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="submit"] {
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #67759a;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+            input[type="submit"]:hover {
+                background-color: #3a435c
+            }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #67759a;
+            color: white;
+        }
+
+        /* Edit Author Section */
+        #editAuthor {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+            #editAuthor input[type="text"], #editAuthor input[type="submit"] {
+                margin-bottom: 5px;
+            }
+
+        /* Close button */
+        a[aria-label="Close"] {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+            a[aria-label="Close"]:hover {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+    </style>
+</head>
+<body>
+    <h1>Lab2 Authord Controller Options</h1>
+    <h3>Add Author</h3>
+    <form action="javascript:void(0);" method="POST" onsubmit="addAuthor()">
+        <input type="text" id="add-name" placeholder="New Author Name">
+        <input type="text" id="add-address" placeholder="New Author Address">
+        <input type="submit" value="Add">
+    </form>
+
+    <div id="editAuthor">
+        <h3>Edit</h3>
+        <form action="javascript:void(0);" onsubmit="updateAuthor()">
+            <input type="hidden" id="edit-id">
+            <input type="text" id="edit-name">
+            <input type="text" id="edit-address">
+            <input type="submit" value="Save">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+    <p id="counter"></p>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+        </tr>
+        <tbody id="authors"></tbody>
+    </table>
+
+    <script src="js/lab2.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        getAuthors();
+    </script>
+</body>
+</html>
